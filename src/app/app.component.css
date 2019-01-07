@@ -3,7 +3,7 @@
     --light-purple: #9999cc;
     --white: white;
     --grey: #ededed;
-    --light-grey: #00bb3e;
+    --light-green: #00bb3e;
 }
 
 .pinkBackGround {
@@ -84,36 +84,25 @@ div.stripe {
   height: auto;
 }
 
-.custom-checkbox .custom-control-label::before {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -o-border-radius: 0px;
-  border-radius: 0px;
-  border: 0px;
-}
-
 .custom-checkbox .custom-control-label::before{
- border: 5px solid red;
-    background-color: blue;
-border-radius: 90%;
+    background-color:var(--grey);
     display: inline-block;
-
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0.5) url(/assets/images/dot.png) no-repeat;
+    background-position: center;
+    fill: var(--grey);
 }
-.custom-checkbox ..custom-control-label::after{
 
-  background-color: #ffffff;
-  display: inline-block;
 
-  }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
-    background-color:var(--light-grey);
+    background-color:var(--light-green);
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after{
-    background-color:var(--light-grey);
+    background-color:var(--light-green);
   }
 .custom-control-input:active~.custom-control-label::before{
-    background-color:var(--light-grey);
+    background-color:var(--light-green);
 }
 
 a {
