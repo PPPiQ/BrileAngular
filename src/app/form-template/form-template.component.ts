@@ -15,7 +15,7 @@ interface Options {
 
 export class FormTemplateComponent implements OnInit {
   public options: Options[];
-
+  public selectedOption = <any>{};
   constructor() {
           this.options = [{id: 0, label: "Brillentyp. Damen. Herren"},
             {id: 1, label: "Rahmentyp: Randiose Brill"},
@@ -33,6 +33,7 @@ export class FormTemplateComponent implements OnInit {
    }
 
    selectOption(option: Options) {
+
      this.selectedOption = option;
    }
 
