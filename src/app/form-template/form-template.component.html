@@ -12,10 +12,19 @@
                     <div class="dropdown-divider"></div>
                     <fieldset class="form-group m-2">
                         <div class=" custom-control custom-checkbox">
-                          <div *ngFor="let option of options; let i = index; "  class="form-check ">
-                            <input (click)="selectOption(option);" type="checkbox" class="custom-control-input" [attr.id]="'customCheck' + option.id" name="selectList" >
-                            <label class="custom-control-label" [attr.for]="'customCheck' + option.id">{{option.label}}</label>
-                          </div><br>
+                              <div *ngFor="let option of options; let i = index; "  class="form-check ">
+                                <input (click)="selectOption(option);" type="checkbox" class="custom-control-input" [attr.id]="'customCheck' + option.id" name="selectList" >
+                                <label class="custom-control-label" [attr.for]="'customCheck' + option.id">{{option.label}}</label>
+                              </div><br>
+                              <a class="dropdown-toggle" data-toggle="collapse" href="{{'#collapseExample'+ formid}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                mehr Attribute anzeigen
+                              </a>
+                              <div class="collapse" id="{{'collapseExample'+ formid}}" >
+                                <div *ngFor="let option of moreoptions; let i = index; "  class="form-check ">
+                                  <input (click)="selectOption(option);" type="checkbox" class="custom-control-input" [attr.id]="'customCheck' + option.id" name="selectListExtended" >
+                                  <label class="custom-control-label" [attr.for]="'customCheck' + option.id">{{option.label}}</label>
+                                </div><br>
+                              </div>
                         </div>
                     </fieldset>
                   </div>

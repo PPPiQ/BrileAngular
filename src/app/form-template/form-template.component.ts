@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 interface Options {
   id: number;
@@ -15,7 +15,10 @@ interface Options {
 
 export class FormTemplateComponent implements OnInit {
   public options: Options[];
+  public moreoptions: Options[];
   public selectedOption = <any>{};
+  @Input() formid:string;
+
   constructor() {
           this.options = [{id: 0, label: "Brillentyp. Damen. Herren"},
             {id: 1, label: "Rahmentyp: Randiose Brill"},
@@ -24,7 +27,10 @@ export class FormTemplateComponent implements OnInit {
             {id: 4, label: "Runder Rahmen"},
             {id: 5, label: "Still: casual, extravagant"},
             {id: 6, label: "Einstarkenbrille"},
-            {id: 7, label: "Material: Metaill"},
+            {id: 7, label: "Material: Metaill"}
+          ];
+
+          this.moreoptions = [
             {id: 8, label: "some other option 1"},
             {id: 9, label: "some other option 2"},
             {id: 10, label: "some other option 3"},
